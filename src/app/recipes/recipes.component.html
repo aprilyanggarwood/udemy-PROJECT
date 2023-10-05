@@ -2,9 +2,12 @@
   <!-- two col with right 5 and left 7 -->
   <div class="col-md-5">
     <!-- or set the value to the event data / selectedRecipe = $event -(from demo)-->
-    <app-recipe-list
+    <!-- <app-recipe-list
       (recipeWasSelected)="onSelectedRecipe($event)"
-    ></app-recipe-list>
+    ></app-recipe-list> -->
+
+    <!-- use service.ts -->
+    <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
     <app-recipe-detail
