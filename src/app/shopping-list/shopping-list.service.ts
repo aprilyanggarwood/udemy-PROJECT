@@ -20,11 +20,13 @@ export class ShoppingListService {
     return this.ingredients.slice();
   }
 
+  // when user adds a ingredient with amount in the form on shopping list page,ingredients list changed.
   addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
     this.ingredientsChanged.emit(this.ingredients.slice())
   }
 
+  // when user sends ingredients to the shopping list, ingredients list changed.
   addIngredients(ingredients: Ingredient[]) {
     // for (let ingredient of ingredients) {
     //   this.addIngredient(ingredient);

@@ -12,6 +12,7 @@ export class RecipesComponent implements OnInit {
   selectedRecipe!: Recipe;
   constructor(private recipeService: RecipeService) { }
 
+  // .subscribe - get informed about any changes at the same page
   ngOnInit(): void {
     this.recipeService.recipeSelected
       .subscribe(
