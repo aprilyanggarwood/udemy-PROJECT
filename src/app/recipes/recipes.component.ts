@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from './recipe.model';
+
 import { RecipeService } from './recipe.service';
 
 @Component({
@@ -9,24 +9,25 @@ import { RecipeService } from './recipe.service';
   providers:[RecipeService]
 })
 export class RecipesComponent implements OnInit {
-  selectedRecipe!: Recipe;
-  constructor(private recipeService: RecipeService) { }
+  // selectedRecipe!: Recipe;
+  // constructor(private recipeService: RecipeService) { }
+  constructor() { }
 
   // .subscribe - get informed about any changes at the same page
   ngOnInit(): void {
-    this.recipeService.recipeSelected
-      .subscribe(
-        (recipe: Recipe) => {
-          this.selectedRecipe = recipe;
-        }
-      )
+    // this.recipeService.recipeSelected
+    //   .subscribe(
+    //     (recipe: Recipe) => {
+    //       this.selectedRecipe = recipe;
+    //     }
+    //   )
 
   }
 
   // if use selectedRecipe = $event from demo, don't need this onSelectedRecipe function
-  onSelectedRecipe(recipe: Recipe) {
-    this.selectedRecipe = recipe
+  // onSelectedRecipe(recipe: Recipe) {
+  //   this.selectedRecipe = recipe
 
-  }
+  // }
 
 }
