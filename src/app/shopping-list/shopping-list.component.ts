@@ -38,6 +38,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   //   this.ingredients.push(ingredient);
   // }
 
+
   // this is the recommended pattern which will replace the event emitter with a more optimal solution
   ngOnDestroy(): void {
     this.igChangeSub.unsubscribe();
